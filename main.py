@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib
 import matplotlib.pyplot as plt
 
 
@@ -27,6 +26,7 @@ if __name__ == '__main__':
     coords = []
     costs = []
     NUM_POINTS = 10
+    NUM_ITERATIONS = 1000
 
     for i in range(NUM_POINTS):
         coords.append(Coordinate(np.random.uniform(), np.random.uniform()))
@@ -42,8 +42,7 @@ if __name__ == '__main__':
 
     T = 30
     factor = 0.99
-    T_init = T
-    for i in range(1000):
+    for i in range(NUM_ITERATIONS):
         print(i, 'cost =', cost0)
         costs.append(cost0)
 
